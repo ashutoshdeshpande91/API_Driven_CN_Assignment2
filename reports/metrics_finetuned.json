@@ -1,0 +1,42 @@
+{
+  "tag": "finetuned",
+  "model": "models/ca-extractor",
+  "n_test": 300,
+  "event_type_accuracy": 1.0,
+  "full_record_exact_match": 0.98,
+  "field_exact_match": {
+    "event_type": 1.0,
+    "company": 1.0,
+    "isin": 0.9966666666666667,
+    "record_date": 0.9933333333333333,
+    "ex_date": 0.9966666666666667,
+    "old_fv": 1.0,
+    "new_fv": 1.0,
+    "ratio": 0.9793103448275862,
+    "price": 1.0,
+    "size_cr": 1.0,
+    "amount": 1.0
+  },
+  "full_record_lenient": 0.98,
+  "field_lenient_match": {
+    "event_type": 1.0,
+    "company": 1.0,
+    "isin": 0.9966666666666667,
+    "record_date": 0.9933333333333333,
+    "ex_date": 0.9966666666666667,
+    "old_fv": 1.0,
+    "new_fv": 1.0,
+    "ratio": 0.9793103448275862,
+    "price": 1.0,
+    "size_cr": 1.0,
+    "amount": 1.0
+  },
+  "per_event_accuracy": {
+    "STOCK_SPLIT": 1.0,
+    "RIGHTS_ISSUE": 1.0,
+    "BONUS_ISSUE": 1.0,
+    "BUYBACK": 1.0,
+    "DIVIDEND": 1.0,
+    "MERGER": 1.0
+  }
+}

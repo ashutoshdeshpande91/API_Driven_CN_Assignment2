@@ -1,0 +1,7 @@
+.venv/
+.env
+models/
+rag_index/
+__pycache__/
+logs/
+.idea/

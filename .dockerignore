@@ -1,0 +1,13 @@
+.venv
+.idea
+.git
+.env
+__pycache__
+*.pyc
+models
+rag_index
+reports
+docs_rag
+report
+tests
+logs

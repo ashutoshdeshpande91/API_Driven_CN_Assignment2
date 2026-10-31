@@ -1,0 +1,28 @@
+{
+  "tag": "base",
+  "model": "google/flan-t5-base",
+  "n_test": 100,
+  "event_type_accuracy": 0.0,
+  "full_record_exact_match": 0.0,
+  "field_exact_match": {
+    "event_type": 0.0,
+    "company": 0.0,
+    "isin": 0.0,
+    "record_date": 0.0,
+    "ex_date": 0.0,
+    "old_fv": 0.0,
+    "new_fv": 0.0,
+    "ratio": 0.0,
+    "price": 0.0,
+    "size_cr": 0.0,
+    "amount": 0.0
+  },
+  "per_event_accuracy": {
+    "STOCK_SPLIT": 0.0,
+    "RIGHTS_ISSUE": 0.0,
+    "BONUS_ISSUE": 0.0,
+    "BUYBACK": 0.0,
+    "DIVIDEND": 0.0,
+    "MERGER": 0.0
+  }
+}

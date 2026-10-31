@@ -1,0 +1,42 @@
+{
+  "tag": "handwritten",
+  "model": "models/ca-extractor",
+  "n_test": 13,
+  "event_type_accuracy": 1.0,
+  "full_record_exact_match": 0.46153846153846156,
+  "field_exact_match": {
+    "event_type": 1.0,
+    "company": 0.7692307692307693,
+    "isin": 0.6923076923076923,
+    "record_date": 0.9230769230769231,
+    "ex_date": 0.9230769230769231,
+    "amount": 0.6666666666666666,
+    "old_fv": 0.5,
+    "new_fv": 0.5,
+    "ratio": 1.0,
+    "price": 0.75,
+    "size_cr": 1.0
+  },
+  "full_record_lenient": 0.6153846153846154,
+  "field_lenient_match": {
+    "event_type": 1.0,
+    "company": 1.0,
+    "isin": 0.6923076923076923,
+    "record_date": 0.9230769230769231,
+    "ex_date": 0.9230769230769231,
+    "amount": 1.0,
+    "old_fv": 0.5,
+    "new_fv": 0.5,
+    "ratio": 1.0,
+    "price": 1.0,
+    "size_cr": 1.0
+  },
+  "per_event_accuracy": {
+    "DIVIDEND": 1.0,
+    "STOCK_SPLIT": 1.0,
+    "BONUS_ISSUE": 1.0,
+    "RIGHTS_ISSUE": 1.0,
+    "BUYBACK": 1.0,
+    "MERGER": 1.0
+  }
+}

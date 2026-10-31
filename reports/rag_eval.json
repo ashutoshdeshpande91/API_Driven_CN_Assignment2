@@ -1,0 +1,140 @@
+{
+  "k": 5,
+  "questions": 13,
+  "hit_at_k": 0.6923076923076923,
+  "hit_at_1": 0.38461538461538464,
+  "mrr": 0.4666666666666667,
+  "source_in_topk": 1.0,
+  "rows": [
+    {
+      "question": "What advance notice is required before the record date of a rights issue?",
+      "expected_source": "Master_Circular",
+      "phrase": "at least 3 working days",
+      "rank_of_correct": 5,
+      "source_in_topk": true,
+      "top1_source": "SEBI_ICDR_Master_Circular_2026-02-09.pdf",
+      "top1_page": 8,
+      "top1_score": 0.597
+    },
+    {
+      "question": "Within how many working days must a rights issue be completed after board approval?",
+      "expected_source": "Master_Circular",
+      "phrase": "23 working days",
+      "rank_of_correct": 1,
+      "source_in_topk": true,
+      "top1_source": "SEBI_ICDR_Master_Circular_2026-02-09.pdf",
+      "top1_page": 8,
+      "top1_score": 0.648
+    },
+    {
+      "question": "How soon after the record date can bonus shares be traded?",
+      "expected_source": "Master_Circular",
+      "phrase": "t+2 day",
+      "rank_of_correct": 3,
+      "source_in_topk": true,
+      "top1_source": "SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf",
+      "top1_page": 229,
+      "top1_score": 0.677
+    },
+    {
+      "question": "What does an issuer proposing a bonus issue have to apply for after the board meeting?",
+      "expected_source": "Master_Circular",
+      "phrase": "in-principle approval",
+      "rank_of_correct": "",
+      "source_in_topk": true,
+      "top1_source": "SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf",
+      "top1_page": 229,
+      "top1_score": 0.651
+    },
+    {
+      "question": "What fine is charged per day for a delay in completing a bonus issue?",
+      "expected_source": "Master_Circular",
+      "phrase": "20,000 per day",
+      "rank_of_correct": "",
+      "source_in_topk": true,
+      "top1_source": "SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf",
+      "top1_page": 229,
+      "top1_score": 0.603
+    },
+    {
+      "question": "How long before a rights issue closes must trading in rights entitlements stop?",
+      "expected_source": "Master_Circular",
+      "phrase": "three working days prior",
+      "rank_of_correct": "",
+      "source_in_topk": true,
+      "top1_source": "SEBI_ICDR_Master_Circular_2026-02-09.pdf",
+      "top1_page": 8,
+      "top1_score": 0.603
+    },
+    {
+      "question": "What is the minimum and maximum period a rights issue stays open for subscription?",
+      "expected_source": "ICDR",
+      "phrase": "minimum period of seven days",
+      "rank_of_correct": 5,
+      "source_in_topk": true,
+      "top1_source": "SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf",
+      "top1_page": 78,
+      "top1_score": 0.718
+    },
+    {
+      "question": "How long must a buy-back tender offer remain open?",
+      "expected_source": "BuyBack",
+      "phrase": "remain open for a period",
+      "rank_of_correct": "",
+      "source_in_topk": true,
+      "top1_source": "SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf",
+      "top1_page": 27,
+      "top1_score": 0.703
+    },
+    {
+      "question": "What is the maximum size of a buy-back as a share of paid-up capital and free reserves?",
+      "expected_source": "BuyBack",
+      "phrase": "twenty-five per cent",
+      "rank_of_correct": 1,
+      "source_in_topk": true,
+      "top1_source": "SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf",
+      "top1_page": 5,
+      "top1_score": 0.763
+    },
+    {
+      "question": "By when must the public announcement of a buy-back be made after the board resolution?",
+      "expected_source": "BuyBack",
+      "phrase": "within two working days",
+      "rank_of_correct": 1,
+      "source_in_topk": true,
+      "top1_source": "SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf",
+      "top1_page": 13,
+      "top1_score": 0.68
+    },
+    {
+      "question": "Can a company buy back its shares through negotiated deals?",
+      "expected_source": "BuyBack",
+      "phrase": "negotiated deals",
+      "rank_of_correct": 1,
+      "source_in_topk": true,
+      "top1_source": "SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf",
+      "top1_page": 8,
+      "top1_score": 0.65
+    },
+    {
+      "question": "For which purposes does a listed entity fix a record date?",
+      "expected_source": "LODR",
+      "phrase": "declaration of dividend",
+      "rank_of_correct": 3,
+      "source_in_topk": true,
+      "top1_source": "SEBI_LODR_2015_amended_2026-10-15.pdf",
+      "top1_page": 144,
+      "top1_score": 0.614
+    },
+    {
+      "question": "How much advance notice did SEBI require before a stock exchange changes the settlement cycle?",
+      "expected_source": "T1_Rolling",
+      "phrase": "advance notice of at least one month",
+      "rank_of_correct": 1,
+      "source_in_topk": true,
+      "top1_source": "SEBI_Circular_T1_Rolling_Settlement_2021-09-07.pdf",
+      "top1_page": 1,
+      "top1_score": 0.712
+    }
+  ]
+}

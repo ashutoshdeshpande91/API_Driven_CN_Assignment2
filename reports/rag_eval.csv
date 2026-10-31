@@ -1,0 +1,14 @@
+question,expected_source,phrase,rank_of_correct,source_in_topk,top1_source,top1_page,top1_score
+What advance notice is required before the record date of a rights issue?,Master_Circular,at least 3 working days,5,True,SEBI_ICDR_Master_Circular_2026-02-09.pdf,8,0.597
+Within how many working days must a rights issue be completed after board approval?,Master_Circular,23 working days,1,True,SEBI_ICDR_Master_Circular_2026-02-09.pdf,8,0.648
+How soon after the record date can bonus shares be traded?,Master_Circular,t+2 day,3,True,SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf,229,0.677
+What does an issuer proposing a bonus issue have to apply for after the board meeting?,Master_Circular,in-principle approval,,True,SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf,229,0.651
+What fine is charged per day for a delay in completing a bonus issue?,Master_Circular,"20,000 per day",,True,SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf,229,0.603
+How long before a rights issue closes must trading in rights entitlements stop?,Master_Circular,three working days prior,,True,SEBI_ICDR_Master_Circular_2026-02-09.pdf,8,0.603
+What is the minimum and maximum period a rights issue stays open for subscription?,ICDR,minimum period of seven days,5,True,SEBI_ICDR_Regulations_2018_amended_2026-03-21.pdf,78,0.718
+How long must a buy-back tender offer remain open?,BuyBack,remain open for a period,,True,SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf,27,0.703
+What is the maximum size of a buy-back as a share of paid-up capital and free reserves?,BuyBack,twenty-five per cent,1,True,SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf,5,0.763
+By when must the public announcement of a buy-back be made after the board resolution?,BuyBack,within two working days,1,True,SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf,13,0.68
+Can a company buy back its shares through negotiated deals?,BuyBack,negotiated deals,1,True,SEBI_BuyBack_Regulations_2018_amended_2026-07-06.pdf,8,0.65
+For which purposes does a listed entity fix a record date?,LODR,declaration of dividend,3,True,SEBI_LODR_2015_amended_2026-10-15.pdf,144,0.614
+How much advance notice did SEBI require before a stock exchange changes the settlement cycle?,T1_Rolling,advance notice of at least one month,1,True,SEBI_Circular_T1_Rolling_Settlement_2021-09-07.pdf,1,0.712

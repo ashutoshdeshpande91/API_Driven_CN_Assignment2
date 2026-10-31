@@ -1,0 +1,24 @@
+[BONUS_ISSUE]
+To, The Listing Department, National Stock Exchange of India Ltd. / BSE Ltd. Sub: Vindhya Infratech Limited, ISIN INE9RB0Y6013 This is to inform you that, pursuant to the approval of the Board of Directors dated 26 April 2027, the Company has announced the following corporate action: Issue of bonus shares in the proportion of 2 equity share(s) for every 4 equity share(s) held by the shareholders, by capitalisation of free reserves. The record date for determining the eligible shareholders has been fixed as May 17, 2027. The ex-date will be 17th May 2027. The bonus shares will rank pari passu with the existing equity shares. Thanking you. For Vindhya Infratech Limited, Company Secretary & Compliance Officer.
+=> event_type: BONUS_ISSUE ; company: Vindhya Infratech Limited ; isin: INE9RB0Y6013 ; record_date: 2027-05-17 ; ex_date: 2027-05-17 ; ratio: 2:4
+
+[RIGHTS_ISSUE]
+To, The Listing Department, National Stock Exchange of India Ltd. / BSE Ltd. Sub: Sahyadri Paints Ltd., ISIN INEY2MVEK019 Please note the following corporate action announced by Sahyadri Paints Ltd.: Offer of equity shares on rights basis in the entitlement ratio of 2:5 at Rs. 1000 each. Record Date: 15th March 2027. The Rights Issue Committee will decide the issue opening and closing dates separately. Kindly take the above information on record.
+=> event_type: RIGHTS_ISSUE ; company: Sahyadri Paints Ltd. ; isin: INEY2MVEK019 ; record_date: 2027-03-15 ; ex_date: NA ; ratio: 2:5 ; price: 1000
+
+[STOCK_SPLIT]
+Corporate Announcement - Tapti Steels Ltd. - ISIN: INEPMTT4K014 We wish to inform you that the Board of Directors of Tapti Steels Ltd. (the Company), at its meeting held on 30th December 2025, has approved the following: Sub-division of the existing equity shares of the Company from face value of INR 10/- per share to INR 1/- per share. The record date for determining the eligible shareholders has been fixed as February 9, 2026. The Board Meeting commenced at 11:30 AM and concluded at 02:45 PM.
+=> event_type: STOCK_SPLIT ; company: Tapti Steels Ltd. ; isin: INEPMTT4K014 ; record_date: 2026-02-09 ; ex_date: NA ; old_fv: 10 ; new_fv: 1
+
+[RIGHTS_ISSUE]
+To, The Listing Department, National Stock Exchange of India Ltd. / BSE Ltd. Sub: Himalaya Infratech Limited, ISIN INE4UH7D3010 We wish to inform you that the Board of Directors of Himalaya Infratech Limited (the Company), at its meeting held on 04-Jan-2026, has approved the following: Offer of equity shares on rights basis in the entitlement ratio of 2:3 at Rs. 125 each. Shareholders whose names appear in the Register of Members / list of Beneficial Owners as on 19th January 2026 (Record Date) shall be eligible. The ex-date will be 19-Jan-2026. The Rights Issue Committee will decide the issue opening and closing dates separately. Kindly take the above information on record.
+=> event_type: RIGHTS_ISSUE ; company: Himalaya Infratech Limited ; isin: INE4UH7D3010 ; record_date: 2026-01-19 ; ex_date: 2026-01-19 ; ratio: 2:3 ; price: 125
+
+[BUYBACK]
+Subject: Intimation under Regulation 30 - Chambal Foods Limited (ISIN: INEUMRWYK017) This is to inform you that, pursuant to the approval of the Board of Directors dated 25th June 2026, the Company has announced the following corporate action: Buyback of equity shares through tender offer at INR 1800 per share; maximum buyback size INR 50 crore (excluding transaction costs). The record date for determining the eligible shareholders has been fixed as 30-Jul-2026. The buy-back will be undertaken in accordance with the SEBI (Buy-Back of Securities) Regulations, 2018.
+=> event_type: BUYBACK ; company: Chambal Foods Limited ; isin: INEUMRWYK017 ; record_date: 2026-07-30 ; ex_date: NA ; price: 1800 ; size_cr: 50
+
+[DIVIDEND]
+Corporate Announcement - Godavari Power Limited - ISIN: INE8Z2ATD011 In continuation of our earlier intimation, the Board of Directors of the Company on January 9, 2027 considered and approved the following: The Board has declared a special dividend of Rs. 6 per equity share of face value Rs. 10/- each for the financial year ended 31st March 2026. Record Date: 4th February 2027. The ex-date will be 04-Feb-2027. The dividend will be paid on or before 22 February 2027 to eligible shareholders.
+=> event_type: DIVIDEND ; company: Godavari Power Limited ; isin: INE8Z2ATD011 ; record_date: 2027-02-04 ; ex_date: 2027-02-04 ; amount: 6
+

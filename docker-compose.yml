@@ -1,0 +1,36 @@
+# Usage:  docker compose up --build
+#   API   -> http://localhost:8000/docs
+#   App   -> http://localhost:8501
+# Needs models/ca-extractor and rag_index/ to exist on this machine (train and build them first).
+# Language-model keys are passed from your environment (nothing is copied into the image).
+x-llm-env: &llm-env
+  - HF_TOKEN
+  - HF_LLM_MODEL
+  - LLM_PROVIDER
+  - GEMINI_API_KEY
+  - GOOGLE_API_KEY
+  - LLM_BASE_URL
+  - LLM_API_KEY
+  - LLM_MODEL
+  - LLM_REASONING_EFFORT
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment: *llm-env
+    volumes:
+      - ./models:/app/models:ro
+      - ./rag_index:/app/rag_index:ro
+
+  app:
+    build: .
+    command: ["streamlit", "run", "app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    ports:
+      - "8501:8501"
+    environment: *llm-env
+    volumes:
+      - ./models:/app/models:ro
+      - ./rag_index:/app/rag_index:ro
+      - ./reports:/app/reports:ro
