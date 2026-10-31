@@ -1,7 +1,7 @@
 """Fine-tune a small seq2seq model to classify a corporate-action notice and extract its key fields.
 
 Usage (project root):
-    python -m src.train                                   # flan-t5-base, full fine-tune (fits a 12 GB GPU)
+    python -m src.train                                   # flan-t5-base, full fine-tune (a GPU with about 12 GB is enough)
     python -m src.train --model google/flan-t5-large --lora   # bigger model with LoRA adapters
 """
 import argparse

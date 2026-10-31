@@ -335,7 +335,7 @@ def step_preflight(ctx):
         ctx.say("GPU: %s, %s of %s MiB in use, driver supports CUDA %s" % (
             ctx.gpu["name"], ctx.gpu["used_mib"], ctx.gpu["total_mib"], ctx.gpu["cuda"]))
         if ctx.gpu["used_mib"] and ctx.gpu["used_mib"] > 4000:
-            ctx.say("  WARNING: a lot of GPU memory is already in use. Close games and other GPU programs "
+            ctx.say("  WARNING: a lot of GPU memory is already in use. Close other GPU-heavy programs "
                     "before training.")
             warn = True
     else:
@@ -503,13 +503,26 @@ def step_baseline(ctx):
 def step_train(ctx):
     if model_ready() and not ctx.force("train"):
         return "skip", "models/ca-extractor already exists"
-    if ctx.gpu and ctx.gpu["used_mib"] and ctx.gpu["used_mib"] > 4000 and not ctx.args.cpu:
-        if not ask(ctx, "Over 4 GB of GPU memory is already in use (games or other apps?). Continue anyway?", False):
+    if ctx.dry:
+        on_gpu = ctx.gpu is not None and not ctx.args.cpu
+    else:
+        st = torch_state(ctx)
+        on_gpu = bool(st and st["cuda"]) and not ctx.args.cpu
+    if on_gpu and ctx.gpu and ctx.gpu["used_mib"] and ctx.gpu["used_mib"] > 4000:
+        if not ask(ctx, "Over 4 GB of GPU memory is already in use. Continue anyway?", False):
             return "fail", "Close GPU-heavy programs and run again"
-    ctx.say("Training takes about 2 minutes on an RTX 4070 SUPER (hours on a CPU).")
+    epochs = getattr(ctx.args, "epochs", None)
+    if on_gpu:
+        ctx.say("Training takes a few minutes on a recent NVIDIA GPU.")
+    else:
+        epochs = epochs or 1
+        ctx.say("No usable GPU, so the model trains on the CPU for %s epoch(s) instead of 3." % epochs)
+        ctx.say("This can take roughly 30 to 90 minutes (an estimate). Training for free on Google Colab is")
+        ctx.say("faster; see the README, then copy the model folder to models/ca-extractor and rerun this script.")
+    extra = ["--epochs", str(epochs)] if epochs else []
     batches = [None, 8, 4]
     for i, b in enumerate(batches):
-        cmd = [ctx.py, "-m", "src.train"] + (["--batch", str(b)] if b else [])
+        cmd = [ctx.py, "-m", "src.train"] + extra + (["--batch", str(b)] if b else [])
         rc, tail = run(ctx, cmd)
         if ctx.dry:
             return "dry", ""
@@ -669,6 +682,7 @@ def parse_args(argv):
     ap.add_argument("--from", dest="from_step", help="start at this step id")
     ap.add_argument("--force", help="comma-separated step ids to redo even if already done")
     ap.add_argument("--cpu", action="store_true", help="install and use the CPU build of PyTorch")
+    ap.add_argument("--epochs", type=float, help="training epochs (default 3 on a GPU, 1 on a CPU)")
     ap.add_argument("--python", help="use this interpreter instead of creating .venv")
     ap.add_argument("--launch", choices=["none", "app", "api", "both"], help="what to start at the end")
     return ap.parse_args(argv)
@@ -719,7 +733,7 @@ def main(argv=None):
     ctx.say("  - installs Python packages and PyTorch into the .venv folder here (the NVIDIA driver is never touched)")
     ctx.say("  - downloads roughly 6-8 GB in total (my estimate): PyTorch and packages, the base model (~1 GB) and")
     ctx.say("    a small embedding model, stored in your user profile's Hugging Face cache, plus public documents")
-    ctx.say("  - trains the model (about 2 minutes on a good GPU), evaluates it, builds the document index")
+    ctx.say("  - trains the model (minutes on a GPU, longer on a CPU), evaluates it, builds the document index")
     ctx.say("  - never prints or logs your keys; a log of this run goes to the logs/ folder")
     if not ctx.dry and not ask(ctx, "\nContinue?", True):
         ctx.say("Cancelled.")
