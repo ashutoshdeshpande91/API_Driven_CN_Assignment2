@@ -33,14 +33,14 @@ def _custom():
     """(base_url, api_key, model) for an OpenAI-compatible endpoint, or None.
 
     LLM_PROVIDER=gemini is a shortcut: it uses Google's OpenAI-compatible endpoint, reads the key from
-    GEMINI_API_KEY (or GOOGLE_API_KEY), and defaults the model to gemini-2.5-flash.
+    GEMINI_API_KEY (or GOOGLE_API_KEY), and defaults the model to gemini-3.6-flash.
     Otherwise set LLM_BASE_URL, LLM_API_KEY and LLM_MODEL yourself.
     """
     base, key, model = os.getenv("LLM_BASE_URL"), os.getenv("LLM_API_KEY"), os.getenv("LLM_MODEL")
     if (os.getenv("LLM_PROVIDER") or "").strip().lower() == "gemini":
         base = base or GEMINI_BASE
         key = key or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
-        model = model or "gemini-2.5-flash"
+        model = model or "gemini-3.6-flash"
     if base and key:
         return base, key, model
     return None

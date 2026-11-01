@@ -452,7 +452,7 @@ def step_llm(ctx):
                          and not any(x in i.lower() for x in ("image", "tts", "embed", "live", "audio"))]
                 if flash:
                     ctx.say("Models with 'flash' in the name:\n   " + "\n   ".join(flash[:12]))
-                name = input("Type the model name to use (Enter = the app's default, gemini-2.5-flash): ").strip()
+                name = input("Type the model name to use (Enter = the app's default, gemini-3.6-flash): ").strip()
                 if name:
                     update_env_file(env_file, {"LLM_MODEL": name[len("models/"):] if name.startswith("models/") else name})
         elif choice == "2":
