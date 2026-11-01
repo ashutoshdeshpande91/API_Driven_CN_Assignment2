@@ -98,7 +98,7 @@ def test_llm_routing_and_http(monkeypatch=None):
         assert llm._custom() is None                       # provider set but no key yet
         os.environ["GEMINI_API_KEY"] = "test-key"
         base, key, model = llm._custom()
-        assert base.endswith("/v1beta/openai/") and key == "test-key" and model == "gemini-2.5-flash"
+        assert base.endswith("/v1beta/openai/") and key == "test-key" and model == "gemini-3.6-flash"
         assert llm.llm_available()
 
         seen = {}
@@ -123,7 +123,7 @@ def test_llm_routing_and_http(monkeypatch=None):
         assert llm.chat("sys", "user") == "ready"
         assert seen["url"] == "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", seen
         assert seen["auth"] == "Bearer test-key"
-        assert seen["body"]["model"] == "gemini-2.5-flash" and seen["body"]["reasoning_effort"] == "none"
+        assert seen["body"]["model"] == "gemini-3.6-flash" and seen["body"]["reasoning_effort"] == "none"
     finally:
         urllib.request.urlopen = real_urlopen
         for k in keys:
